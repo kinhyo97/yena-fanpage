@@ -1,0 +1,20 @@
+.sidebar {
+  width: 180px;
+  background-color: pink;
+  height: 100vh;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 500;
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin-top: 4rem; /* 👈 이 부분 추가해서 아래로 내림 */
+}
+
+.nav-links li {
+  margin: 1rem 0;
+}

@@ -1,0 +1,124 @@
+
+* {
+  box-sizing: border-box;
+}
+
+
+.album-container {
+  width: 100%;
+  padding: 0 1rem;      /* 좌우 여백만 적당히 */
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.album-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.album-heading {
+  font-size: 1.2rem;
+  color: #e879f9;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 0.5rem;
+}
+
+.album-name {
+  font-weight: bold;
+  color: #3f2e99;
+}
+
+.album-card {
+  
+    display: flex;
+  align-items: center;
+  background-color: #3f2e99;
+  color: white;
+  padding: 1rem;
+  border-radius: 16px;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.album-image {
+  width: 100px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.album-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.album-meta-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.album-meta-sub {
+  font-size: 0.95rem;
+}
+
+.album-meta-info {
+  font-size: 0.85rem;
+  color: #fcd34d;
+}
+
+.tracklist-title {
+  margin-top: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.tracklist-table-wrapper {
+  margin-top: 1rem;
+}
+
+.tracklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  table-layout: fixed;
+  border: 1px solid #ccc;
+}
+
+.tracklist-table th,
+.tracklist-table td {
+  padding: 0.5rem 0.6rem;
+  border: 1px solid #ccc;
+  text-align: left;
+  vertical-align: top;
+  white-space: normal;
+  word-break: break-word;
+}
+
+.tracklist-table th {
+  background-color: #3f2e99;
+  color: white;
+  font-weight: bold;
+}
+
+.toggle-tracklist {
+  cursor: pointer;
+}
+
+.tracklist-toggle-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3f2e99;  /* 보라색 */
+  color: white;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 16px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 0.95rem;
+}

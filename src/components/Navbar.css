@@ -1,0 +1,103 @@
+.navbar {
+  background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+/* 왼쪽 햄버거 버튼 */
+.menu-toggle {
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  width: 2rem;
+  text-align: left;
+}
+
+/* 중앙 제목을 absolute로 감싸서 정확히 가운데에 배치 */
+.navbar-title-wrapper {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  pointer-events: none; /* 클릭 방지용 (실제 링크는 내부에서 처리) */
+}
+
+.navbar-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  pointer-events: auto;
+}
+
+/* 오른쪽 여백 (왼쪽 버튼과 균형 맞춤) */
+.spacer {
+  width: 2rem;
+}
+
+/* 사이드바 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -200px;
+  width: 200px;
+  height: 100%;
+  background-color: pink;
+  transition: left 0.3s ease;
+  padding-top: 4rem;
+  z-index: 999;
+}
+
+.sidebar.open {
+  left: 0;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.sidebar-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* rainbow 텍스트 애니메이션 */
+@keyframes rainbowFlow {
+  0% { color: #ff6699; }
+  25% { color: #ffcc66; }
+  50% { color: #66ff99; }
+  75% { color: #66ccff; }
+  100% { color: #ff6699; }
+}
+
+.rainbow-text {
+  animation: rainbowFlow 10s linear infinite;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

@@ -1,58 +1,37 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import './Navbar.css';
 
 const Navbar = () => {
-  const navStyle = {
-    backgroundColor: 'pink',
-    color: 'white',
-    padding: '1rem 0',
-    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-    position: 'sticky',
-    top: 0,
-    zIndex: 1000,
-    fontFamily: "'Jua', sans-serif"
-  };
-
-  const ulStyle = {
-    display: 'flex',
-    justifyContent: 'center',
-    listStyle: 'none',
-    gap: '2rem',
-    margin: 0,
-    padding: 0,
-    fontWeight: '600',
-    fontSize: '1.1rem',
-  };
-
-  const liStyle = {
-    cursor: 'pointer',
-    transition: 'color 0.3s ease',
-  };
-
-  const handleMouseEnter = (e) => {
-    e.target.style.color = '#facc15';
-  };
-
-  const handleMouseLeave = (e) => {
-    e.target.style.color = 'white';
-  };
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav style={navStyle}>
-      <ul style={ulStyle}>
-        <li style={liStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Gallery</Link>
-        </li>
-        <li style={liStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/about" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link>
-        </li>
-        <li style={liStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/gallery" style={{ textDecoration: 'none', color: 'inherit' }}>Info</Link>
-        </li>
-        <li style={liStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-          <Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact</Link>
-        </li>
-      </ul>
-    </nav>
+    <>
+      <nav className="navbar">
+        <button className="menu-toggle" onClick={() => setIsOpen(!isOpen)}>
+          ☰
+        </button>
+
+        {/* 가운데 정렬용 wrapper 안에 제목 */}
+        <div className="navbar-title-wrapper">
+          <Link to="/" className="navbar-title rainbow-text" onClick={() => setIsOpen(false)}>
+            예나지금이나
+          </Link>
+        </div>
+
+        {/* 오른쪽 여백용 spacer */}
+        <div className="spacer" />
+      </nav>
+
+      <div className={`sidebar ${isOpen ? 'open' : ''}`}>
+        <ul className="sidebar-links">
+          <li><Link to="/" onClick={() => setIsOpen(false)}>Gallery</Link></li>
+          <li><Link to="/about" onClick={() => setIsOpen(false)}>Info</Link></li>
+          <li><Link to="/album" onClick={() => setIsOpen(false)}>Album</Link></li>
+          <li><Link to="/contact" onClick={() => setIsOpen(false)}>Contact</Link></li>
+        </ul>
+      </div>
+    </>
   );
 };
 

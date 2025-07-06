@@ -1,0 +1,25 @@
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffc0cb, 0 0 15px #ffc0cb, 0 0 20px #ff69b4;
+  }
+  50% {
+    text-shadow: 0 0 10px #fff, 0 0 20px #ffb6c1, 0 0 25px #ff69b4, 0 0 30px #ff1493;
+  }
+  100% {
+    text-shadow: 0 0 5px #fff, 0 0 10px #ffc0cb, 0 0 15px #ffc0cb, 0 0 20px #ff69b4;
+  }
+}
+
+.twinkle-text {
+  color: #ff69b4;
+  animation: glow 2s ease-in-out infinite;
+}
+
+.centered-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  text-align: center;        /* ✅ 가운데 정렬 핵심 */
+  color: #ff66cc;
+  text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}

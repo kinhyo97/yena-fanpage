@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
-
+import './Gallery.css';
 const Gallery = () => {
   const [visible, setVisible] = useState(false);
 
   const images = [
+    '/yena_gif1.gif',
     '/yena1.jpg',
     '/yena2.jpg',
     '/yena3.jpg',
@@ -16,16 +17,15 @@ const Gallery = () => {
   }, []);
 
   const containerStyle = {
-    fontFamily: "'Jua', sans-serif",
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    gap: '1rem',
-    opacity: visible ? 1 : 0,
-    transform: visible ? 'translateY(0)' : 'translateY(30px)',
-    transition: 'opacity 3s ease, transform 3s ease',
-  };
-
+  fontFamily: "'Jua', sans-serif",
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'center',
+  gap: '2rem', // ← 여기 수정!
+  opacity: visible ? 1 : 0,
+  transform: visible ? 'translateY(0)' : 'translateY(30px)',
+  transition: 'opacity 3s ease, transform 3s ease',
+};
   const imageStyle = {
     width: '300px',
     borderRadius: '12px',
@@ -45,9 +45,11 @@ const Gallery = () => {
 
   return (
     <div style={containerStyle}>
-      <h2 style={{ fontSize: '1.8rem', fontWeight: 'bold', marginBottom: '1rem' }}>
-        최예나의 팬페이지에 오신 것을 환영합니다 💛
-      </h2>
+      <h2
+      className="twinkle-text centered-heading"
+    >
+      Yena Open Source Project ♥
+    </h2>
       {images.map((src, index) => (
         <img
           key={index}
