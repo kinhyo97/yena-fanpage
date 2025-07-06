@@ -1,12 +1,7 @@
 # React + Vite
+안녕하세요 저는 현재 프론트엔드를 공부중인 학생입니다.
+최예나 팬페이지라는 컨셉으로 프론트엔드 작업을 진행중입니다. 추후에 Spring server와 연계해서 JPA를 통해 데이터베이스 연결 후 게시판기능과 로그인기능등을 구현 할 계획이지만 현재는 화면 구성에 집중하고 있습니다. 
+프론트엔드는 React + Vite로 작업중입니다.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Contribute
+초보 프론트엔드분들의 많은 참여 부탁드립니다 !
