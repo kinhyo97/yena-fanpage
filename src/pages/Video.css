@@ -1,0 +1,54 @@
+.video-container {
+  padding: 2rem;
+  text-align: center;
+}
+
+.video-input {
+  margin-bottom: 2rem;
+}
+
+.video-input input {
+  width: 300px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.video-input button {
+  margin-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ff69b4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.video-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.video-card {
+  position: relative;
+}
+
+.video-card iframe {
+  width: 320px;
+  height: 180px;
+  border-radius: 12px;
+}
+
+.remove-btn {
+  margin-top: 0.5rem;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}

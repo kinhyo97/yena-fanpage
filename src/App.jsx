@@ -5,10 +5,14 @@ import Album from './pages/Album';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import Info from './pages/Info';
+import ButterflyBackground from './components/ButterflyBackground';
+import Video from './pages/Video';
+
 
 function App() {
   return (
     <>
+    <ButterflyBackground />
       <Navbar />
       <div style={{ 
         marginTop: '4rem', 
@@ -24,6 +28,7 @@ function App() {
             <Route path="/about" element={<Info />} />
             <Route path="/album" element={<Album />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/video" element={<Video />} />
           </Routes>
         </div>
       </div>
