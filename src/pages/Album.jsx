@@ -1,90 +1,45 @@
-import { useState } from 'react';
+import AlbumCard from '../components/AlbumCard';
 import './Album.css';
 
 const Album = () => {
-  const [showTracklist, setShowTracklist] = useState(false); // ✅ 트랙리스트 상태 추가
+  const tracklist1 = [
+    { number: '01', title: 'Before Anyone Else', lyrics: 'YENA, 72', composer: 'YENA, pollock, Mayu Wakisaka' },
+    { number: '02', title: 'SMILEY (Feat. BIBI)', lyrics: '트웰브 (twlv), BIBI, YENA, 72', composer: 'Olof Lindskog, Gavin Jones, Hayley Aitken, 트웰브 (twlv), BIBI' },
+    { number: '03', title: 'Lxxk 2 U', lyrics: '문다은(MUMW), 남혜주(MUMW), YENA, 72', composer: 'pollock, Jonathan Sim, Mayu Wakisaka, Drew Louis, Jayelle Gerber' },
+    { number: '04', title: 'PRETTY BOYS', lyrics: '안영주(MUMW), 조이아(MUMW), YENA, 72', composer: 'Tobias Naslud, Kirubel Swedin, Jonna Hall, Maria Marcus' },
+    { number: '05', title: 'VACAY', lyrics: '강은정, 72', composer: 'pollock, Mayu Wakisaka, Drew Louis, Jayelle Gerber' },
+  ];
+
+  const tracklist2 = [
+    { number: '01', title: 'SMARTPHONE', lyrics: 'YENA, 72', composer: 'David Amber, Sean Michael Alexander' },
+    { number: '02', title: 'Make U Smile', lyrics: 'YENA, danke', composer: '김연서, 이우진' },
+    { number: '03', title: 'WithOrWithOut', lyrics: 'YENA, 72', composer: 'Aaron Kim, Gabriel Brandes' },
+    { number: '04', title: 'Lemon-Aid', lyrics: 'YENA, danke', composer: 'Peter Tambakis, Gabriel Brandes' },
+    { number: '05', title: 'U', lyrics: 'YENA, danke', composer: 'Ollipop, Ludwig Lindell' },
+  ];
 
   return (
     <div className="album-container">
-      <h1 className="album-title">최예나 소개 페이지 💁‍♀️</h1>
+      <h1 className="album-title">Yena's Album 🎀 💁‍♀️</h1>
 
-      {/* 1st Mini Album */}
-      <section className="album-section bordered-section">
-        <h2 className="album-heading">
-          1st Mini Album <span className="album-name">《ˣ‿ˣ (SMiLEY)》</span>
-        </h2>
+      {/* 1st Album */}
+      <AlbumCard
+        image="/yena1.jpg"
+        title="1st Mini Album 《ˣ‿ˣ (SMiLEY)》"
+        subtitle="ˣ‿ˣ (SMiLEY)"
+        info="2022. 01. 17. | 16분 36초 | 5곡"
+        tracklist={tracklist1}
+      />
 
-        <div className="album-card">
-          <img src="/yena1.jpg" alt="smiley cover" className="album-image" />
-          <div className="album-meta">
-            <div className="album-meta-title">ˣ‿ˣ (SMiLEY)</div>
-            <div className="album-meta-sub">The 1st Mini Album</div>
-            <div className="album-meta-info">2022. 01. 17. | 16분 36초 | 5곡</div>
-          </div>
-        </div>
-
-        {/* ✅ 토글 버튼 */}
-        <div
-  className="tracklist-toggle-card"
-  onClick={() => setShowTracklist(!showTracklist)}
->
-  [ TRACK LIST ]
-</div>
-
-        {/* ✅ 트랙리스트 테이블 토글 */}
-        {showTracklist && (
-          <div className="tracklist-table-wrapper">
-            <table className="tracklist-table">
-              <thead>
-                <tr>
-                  <th>트랙</th>
-                  <th>제목</th>
-                  <th>작사</th>
-                  <th>작곡</th>
-                  <th>편곡</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>01</td>
-                  <td>Before Anyone Else</td>
-                  <td>YENA, 72</td>
-                  <td>YENA, pollock, Mayu Wakisaka</td>
-                  <td>pollock</td>
-                </tr>
-                <tr>
-                  <td>02</td>
-                  <td>SMILEY (Feat. BIBI)</td>
-                  <td>트웰브 (twlv), BIBI, YENA, 72</td>
-                  <td>Olof Lindskog, Gavin Jones, Hayley Aitken, 트웰브 (twlv), BIBI</td>
-                  <td>OLLIPOP</td>
-                </tr>
-                <tr>
-                  <td>03</td>
-                  <td>Lxxk 2 U</td>
-                  <td>문다은(MUMW), 남혜주(MUMW), YENA, 72</td>
-                  <td>pollock, Jonathan Sim, Mayu Wakisaka, Drew Louis, Jayelle Gerber</td>
-                  <td>pollock, Jonathan Sim</td>
-                </tr>
-                <tr>
-                  <td>04</td>
-                  <td>PRETTY BOYS</td>
-                  <td>안영주(MUMW), 조이아(MUMW), YENA, 72</td>
-                  <td>Tobias Naslud, Kirubel Swedin, Jonna Hall, Maria Marcus</td>
-                  <td>Tobias Naslud, Kirubel Swedin</td>
-                </tr>
-                <tr>
-                  <td>05</td>
-                  <td>VACAY</td>
-                  <td>강은정, 72</td>
-                  <td>pollock, Mayu Wakisaka, Drew Louis, Jayelle Gerber</td>
-                  <td>pollock</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        )}
-      </section>
+      {/* 2nd Album */}
+      <AlbumCard
+        image="/yena2.jpg"
+        title="2nd Mini Album 《SMARTPHONE》"
+        subtitle="SMARTPHONE"
+        info="2022. 08. 03. | 16분 47초 | 5곡"
+        tracklist={tracklist2}
+        color="#d94678"  // 선택사항: 배경색 변경 원할 경우
+      />
     </div>
   );
 };

@@ -3,8 +3,9 @@ import './Info.css';
 const Info = () => {
   return (
     <div className="info-container">
-      <h1>최예나 (Choi Yena)</h1>
-      <img src="/yena1.jpg" alt="Choi Yena" className="info-image" />
+      <h1>🎀 최예나 (Choi Yena) 🎀</h1>
+      <img src="/images/yena-info.jpg" alt="Choi Yena" className="info-image" />
+
 
       <section>
         <h2>INFO</h2>
